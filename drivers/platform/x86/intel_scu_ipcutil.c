@@ -554,7 +554,7 @@ EXPORT_SYMBOL_GPL(intel_scu_ipc_msic_vprog3);
 
 static int scu_reg_access(u32 cmd, struct scu_ipc_data  *data)
 {
-	unsigned int count = data->count;
+	int ret;
 
 	if (data->count == 0 || data->count > 5)
 		return -EINVAL;
