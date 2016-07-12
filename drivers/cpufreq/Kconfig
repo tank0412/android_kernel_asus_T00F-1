@@ -99,11 +99,6 @@ config CPU_FREQ_DEFAULT_GOV_CONSERVATIVEX
 	help
 	A less aggressive version of conservative governor
 
-config CPU_FREQ_DEFAULT_GOV_DARKNESS
-	bool "darkness"
-	select CPU_FREQ_GOV_DARKNESS
-	help
-
 
 config CPU_FREQ_DEFAULT_GOV_HOTPLUG
 	bool "hotplug"
@@ -260,10 +255,6 @@ config CPU_FREQ_GOV_CONSERVATIVEX
 	default y	
 	help
 	A less aggressive version of conservative governor
-
-config CPU_FREQ_GOV_DARKNESS
-	tristate "'darkness' cpufreq governor"	
-	depends on CPU_FREQ
 
 config CPU_FREQ_GOV_HOTPLUG
 	tristate "'hotplug' cpufreq governor"
